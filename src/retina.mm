@@ -2,9 +2,9 @@
 #include <imgui.h>
 #include <imgui-cocos.hpp>
 
-#define CommentType CommentTypeDummy
+#define CommentTypeDummy CommentType
 #import "Cocoa/Cocoa.h"
-#undef CommentType
+#undef CommentTypeDummy
 
 float ImGuiCocos::retinaFactor() {
     float displayScale = 1.f;
