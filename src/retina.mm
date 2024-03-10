@@ -4,7 +4,6 @@
 #include <imgui-cocos.hpp>
 
 #define CommentType CommentTypeDummy
-#import "Cocoa/Cocoa.h"
 #undef CommentType
 
 float ImGuiCocos::retinaFactor() {
