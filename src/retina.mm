@@ -4,6 +4,7 @@
 
 #define CommentType CommentTypeDummy
 #import "Cocoa/Cocoa.h"
+#import <Foundation/Foundation.h
 #undef CommentType
 
 float ImGuiCocos::retinaFactor() {
