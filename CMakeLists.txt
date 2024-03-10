@@ -14,8 +14,11 @@ target_sources(imgui-cocos INTERFACE
 target_include_directories(imgui-cocos INTERFACE include)
 
 if (APPLE)
+    file(GLOB PCH_INCLUDES "include/Prefix.pch")
+    set(PRECOMPILED_HEADER ${CMAKE_CURRENT_SOURCE_DIR}/${PCH_INCLUDES})
+    target_precompile_headers(imgui-cocos INTERFACE ${PRECOMPILED_HEADER})
     target_sources(imgui-cocos INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/src/retina.mm)
-    set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/src/retina.mm PROPERTIES PRECOMPILE_HEADERS ON)
+    # set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/src/retina.mm PROPERTIES PRECOMPILE_HEADERS ON)
 endif()
 
 option(HAS_IMGUI "If imgui is already provided externally" OFF)
