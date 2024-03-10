@@ -1,9 +1,9 @@
-#include "../include/Prefix.pch"
 #include <Geode/Geode.hpp>
 #include <imgui.h>
 #include <imgui-cocos.hpp>
 
 #define CommentType CommentTypeDummy
+#include "../include/Prefix.pch"
 #undef CommentType
 
 float ImGuiCocos::retinaFactor() {
