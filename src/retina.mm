@@ -1,7 +1,10 @@
 #include <Geode/Geode.hpp>
 #include <imgui.h>
 #include <imgui-cocos.hpp>
+
+#define CommentType CommentTypeDummy
 #import "Cocoa/Cocoa.h"
+#undef CommentType
 
 float ImGuiCocos::retinaFactor() {
     float displayScale = 1.f;
